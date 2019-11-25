@@ -47,8 +47,8 @@ bindsym $mod+l exec i3lock -i ~/Mypicture/violet.png
 # Screen Shot gnome-screenshot -a 
  bindsym --release $mod+Shift+s exec gnome-screenshot -a
 
-# Start with ibus deamon
-exec --no-startup-id ibus-daemon
+# Start with fcitx
+ exec --no-startup-id fcitx-autostart
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill "$HOME/Mypicture/gamer.jpg"
@@ -185,5 +185,5 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         #status_command i3status
-	status_command exec /home/Kn1feC/.config/i3status/net-speed.sh
+	status_command exec /home/atlas/.config/i3status/net-speed.sh
 }
