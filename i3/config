@@ -37,7 +37,10 @@ bindsym $mod+Return exec gnome-terminal
 bindsym $mod+Shift+q kill
 
 # lock the screen
-bindsym $mod+l exec i3lock -i ~/Mypicture/violet.png 
+bindsym $mod+l exec i3lock -i ~/Pictures/violet.png 
+
+#disable title bar
+new_window pixel 0
 
 # Media volume controls
  bindsym XF86AudioMute exec amixer sset 'Master' toggle
@@ -51,8 +54,8 @@ bindsym $mod+l exec i3lock -i ~/Mypicture/violet.png
  exec --no-startup-id fcitx-autostart
 
 # wallpaper
-exec_always --no-startup-id feh --bg-fill "$HOME/Mypicture/gamer.jpg"
-
+exec_always --no-startup-id feh --bg-fill "$HOME/Pictures/gamer.jpg"
+exec_always --no-startup-id megasync
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
