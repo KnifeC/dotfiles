@@ -55,7 +55,7 @@ new_window pixel 0
 
 # wallpaper
 exec_always --no-startup-id feh --bg-fill "$HOME/Pictures/gamer.jpg"
-exec_always --no-startup-id megasync
+exec --no-startup-id megasync
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
