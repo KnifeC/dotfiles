@@ -1,0 +1,5 @@
+sudo pacman -S yay alsamixer i3 dmenu \
+		xorg-xbacklight xorg-xrandr\
+		picom fcitx fcitx-googlepinyin \
+&& yay -S aur/i3lockmore-git
+
