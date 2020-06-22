@@ -17,7 +17,7 @@ order += "volume headphones"
 #order += "cpu_temperature 1"
 order += "disk /"
 order += "disk /home"
-#order += "memory"
+order += "memory"
 order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
@@ -70,12 +70,16 @@ disk "/" {
 disk "/home" {
         format = "[~] %avail"
 }
+memory {
+        format = "mem %used | %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
 
 volume headphones {
    format = "Volume : %volume"
    format_muted = "Volume:muted"
-   mixer = "Headphone"
-
+   mixer = "Master"
 }
 
 
