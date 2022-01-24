@@ -18,7 +18,7 @@ order += "volume headphones"
 order += "disk /"
 order += "disk /home"
 order += "memory"
-order += "ipv6"
+#order += "ipv6"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
@@ -80,6 +80,8 @@ volume headphones {
    format = "Volume : %volume"
    format_muted = "Volume:muted"
    mixer = "Master"
+   mixer_idx = 0
+   device = hw:1
 }
 
 
