@@ -50,7 +50,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
-# 其实这两套控制声音的命令都能用，但是不知道为啥和i3bar上显示的声卡
+# 其实这两套控制声音的命令都能用，但是不知道为啥和i3bar上显示的声卡对应不上
 # bindsym XF86AudioMute exec amixer sset 'Master' toggle
 # bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
 # bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
@@ -61,6 +61,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 
 #bindsym $mod+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 
+# light control
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
 
 # Screen Shot gnome-screenshot -a 
  bindsym --release $mod+Shift+s exec gnome-screenshot -a
@@ -213,6 +216,6 @@ bar {
 	status_command exec /home/atlas/.config/i3status/net-speed.sh
 }
 
+# solve chrome save as dialog too big
 floating_minimum_size 75 x 50
-
 floating_maximum_size 1920 x 1080
