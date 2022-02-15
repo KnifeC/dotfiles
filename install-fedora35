@@ -15,4 +15,5 @@ sudo dnf install light
 # python3-devel
 sudo dnf install python3-devel 
 
-
+#fcitx5
+sudo dnf install fcitx5-configtool fcitx5-gtk{,2,3,4} fcitx5-qt{,6} fcitx5-data fcitx5-rime fcitx5-autostart fcitx5-chisese-addons
