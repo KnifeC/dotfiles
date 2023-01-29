@@ -2,10 +2,11 @@
 # https://forums.fedoraforum.org/showthread.php?327575-No-sound-fresh-install
 # https://forums.fedoraforum.org/showthread.php?327650-Fedora-35-NO-sound&highlight=sound
 # https://www.reddit.com/r/Fedora/comments/q57gkk/no_audio_device_after_upgrading_to_fedora_35/
-sudo dnf install alsa-sof-firmware
-sudo dnf install wireplumber-libs wireplumber pipewire-libs pipewire pipewire-alsa pipewire-gstreamer pipewire-jack-audio-connection-kit pipewire-pulseaudio pipewire-utils
-sudo dnf swap wireplumber pipewire-media-session
-systemctl --user restart pipewire-media-session
+#sudo dnf install alsa-sof-firmware
+#sudo dnf install wireplumber-libs wireplumber pipewire-libs pipewire pipewire-alsa pipewire-gstreamer \\
+# pipewire-jack-audio-connection-kit pipewire-pulseaudio pipewire-utils
+#sudo dnf swap wireplumber pipewire-media-session
+#systemctl --user restart pipewire-media-session
 
 
 sudo dnf -y install kernel-headers kernel-devel dkms elfutils-libelf-devel qt5-qtx11extras
