@@ -1,0 +1,21 @@
+version: "3"
+services:
+  cloudflared:
+    container_name: cloudflared
+    image: cloudflare/cloudflared:2023.1.0
+    restart: unless-stopped
+    command: access tcp --hostname ${CLOUDFLARED_URL} --url 0.0.0.0:${CLOUDFLARED_PORT}
+    ports:
+      - "${CLOUDFLARED_PORT}:${CLOUDFLARED_PORT}"
+  ss-local:
+    container_name: ss-local
+    image: shadowsocks/shadowsocks-libev:v3.3.5
+    # volumes:
+    #   - ./config.json:/config.json
+    command: ss-local -b 0.0.0.0 -s cloudflared -p ${CLOUDFLARED_PORT} -k ${SS_PASSWORD} -l ${SS_LOCAL_PORT} -m ${SS_METHOD}
+    ports:
+      - "1099:${SS_LOCAL_PORT}/tcp"
+      - "1099:${SS_LOCAL_PORT}/udp"
+    restart: always
+    links:
+      - cloudflared
