@@ -14,8 +14,8 @@ services:
     #   - ./config.json:/config.json
     command: ss-local -b 0.0.0.0 -s cloudflared -p ${CLOUDFLARED_PORT} -k ${SS_PASSWORD} -l ${SS_LOCAL_PORT} -m ${SS_METHOD}
     ports:
-      - "1099:${SS_LOCAL_PORT}/tcp"
-      - "1099:${SS_LOCAL_PORT}/udp"
+      - "${SS_LOCAL_PORT}:${SS_LOCAL_PORT}/tcp"
+      - "${SS_LOCAL_PORT}:${SS_LOCAL_PORT}/udp"
     restart: always
     links:
       - cloudflared
