@@ -38,22 +38,22 @@ bindsym $mod+Shift+q kill
 
 # lock the screen
 # bindsym $mod+l exec i3lockmore --image-fill "$HOME/Pictures/violet.png" --lock-icon   
-bindsym $mod+l exec i3lock -i "$HOME/Pictures/violet.png"
+bindsym $mod+l exec i3lock -i "$HOME/Pictures/elysia.png"
 
 #disable title bar
 # new_window pixel 1
 
 # Media volume controls
 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 0%
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 0%
 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 # 其实这两套控制声音的命令都能用，但是不知道为啥和i3bar上显示的声卡对应不上
-# bindsym XF86AudioMute exec amixer sset 'Master' toggle
-# bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
-# bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
+bindsym XF86AudioMute exec amixer sset 'Master' toggle
+bindsym XF86AudioLowerVolume exec amixer sset 'Master' 5%-
+bindsym XF86AudioRaiseVolume exec amixer sset 'Master' 5%+
 
 #bindsym $mod+l exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ 0%
 

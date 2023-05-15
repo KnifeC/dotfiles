@@ -81,7 +81,7 @@ volume headphones {
    format_muted = "Volume:muted"
    mixer = "Master"
    mixer_idx = 0
-   device = hw:1
+   device = default
 }
 
 
